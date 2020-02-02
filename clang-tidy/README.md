@@ -1,6 +1,6 @@
 # Clang-Tidy sample
 
-* Modernize: Simple sample, withoput compilation library. Run with `clang-tidy modernize.cpp -checks=modernize-*` or use the script `run-modernize.sh`
+* Modernize: Simple sample, without compilation library. Run with `clang-tidy modernize.cpp -checks=modernize-*` or use the script `run-modernize.sh`
 
 	```
 	No compilation database found in ../clang-tools-demo/clang-tidy or any parent directory
@@ -20,10 +20,11 @@
 	Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
 	```
 	
-	Fix test with `clang-tidy modernize.cpp -checks=modernize-* --fix` or use the script `run-modernize-auto-fix.sh`
+* Fix test with `clang-tidy modernize.cpp -checks=modernize-* --fix` or use the script `run-modernize-auto-fix.sh`
+	
 	Check the fixes applied, using clang-tidy 9.0.1 result is on the file `modernize.fixed.cpp`
 	
-	Removed on warning, test with `clang-tidy modernize.cpp -checks=modernize-*,-modernize-use-trailing-return-type` or use the script `run-modernize-no-training.sh`. Check one warning is removed, the one refering the usage of a trailing return type.
+* Removed on warning, test with `clang-tidy modernize.cpp -checks=modernize-*,-modernize-use-trailing-return-type` or use the script `run-modernize-no-trailing.sh`. Check one warning is removed, the one referring the usage of a trailing return type.
 	
 	```
 	Error while trying to load a compilation database:
@@ -40,3 +41,5 @@
 	Suppressed 2122 warnings (2122 in non-user code).
 	Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
 	```
+	
+* Finally we can run from a file using `clang-tidy modernize.cpp --config=` or `run-modernize-file.sh` script. To generate the configuration file you can run `clang-tidy -checks=-*,modernize-*,-modernize-use-trailing-return-type --dump-config > config.txt` ot the script `run-modernize-dump.sh`. For a reason this dump duplicates the checks from the config file `.clang-tidy` and the ones on the parameter list.
