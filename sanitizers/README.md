@@ -96,7 +96,3 @@ Original files for samples from clang documentation
  * [Memory sanitizer](https://clang.llvm.org/docs/MemorySanitizer.html)
  * [Undefined Behaviour sanitizer](https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html)
  * [Data flow sanitizer](https://clang.llvm.org/docs/DataFlowSanitizer.html)
- 
- 
-
-

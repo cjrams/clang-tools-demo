@@ -10,7 +10,3 @@ Original files for samples:
 
  * [reverse.cpp](https://es.cppreference.com/w/cpp/algorithm/reverse)
  * [configurator.cpp](https://zed0.co.uk/clang-format-configurator/)
-
- 
-
-
