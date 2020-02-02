@@ -1,6 +1,6 @@
 # Sanitizers sample
 
-* Memory sanitizer: Compile the application `clang++ -O1 -g -fsanitize=address -fno-omit-frame-pointer example_UseAfterFree.cc` and the run the appplication`./a.out`. Or run the script `address-sanitizer.sh`
+* Memory sanitizer: Compile the application `clang++ -O1 -g -fsanitize=address -fno-omit-frame-pointer example_UseAfterFree.cc` and the run the application`./a.out`. Or run the script `address-sanitizer.sh`
 
 	```
 	=================================================================
@@ -56,7 +56,7 @@
 	==22719==ABORTING
 	Abort trap: 6
 	```
-* Thread sanitizer: Compile the application `clang -fsanitize=thread -g -O1 tiny_race.c`  and the run the appplication`./a.out`. Or run the script `thread-sanitizer.sh`
+* Thread sanitizer: Compile the application `clang -fsanitize=thread -g -O1 tiny_race.c`  and the run the application`./a.out`. Or run the script `thread-sanitizer.sh`
 
 	```
 	==================
@@ -80,9 +80,9 @@
 
 	```
 
-* Memory sanitizer: Compile the application `clang -fsanitize=memory -fno-omit-frame-pointer -g -O2 umr.cc`  and the run the appplication`./a.out`. Or run the script `memory-sanitizer.sh`. Sadly this sanitizer in not working on osx.
+* Memory sanitizer: Compile the application `clang -fsanitize=memory -fno-omit-frame-pointer -g -O2 umr.cc`  and the run the application`./a.out`. Or run the script `memory-sanitizer.sh`. Sadly this sanitizer in not working on osx.
 
-* Undefined Behavior sanitizer: Compile the application `clang++ -fsanitize=undefined test.cc`  and the run the appplication`./a.out`. Or run the script `ub-sanitizer.sh`. 
+* Undefined Behavior sanitizer: Compile the application `clang++ -fsanitize=undefined test.cc`  and the run the application`./a.out`. Or run the script `ub-sanitizer.sh`. 
 	
 	```
 	test.cc:3:5: runtime error: signed integer overflow: 2147483647 + 1 cannot be represented in type 'int'
@@ -92,7 +92,7 @@ All tests results samples were compiled and run on OSX with `clang++` version 9.
 Original files for samples from clang documentation
 
  * [Address sanitizer](https://clang.llvm.org/docs/AddressSanitizer.html)
- * [Thead sanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html)
+ * [Thread sanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html)
  * [Memory sanitizer](https://clang.llvm.org/docs/MemorySanitizer.html)
- * [Undefined Behaviour sanitizer](https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html)
+ * [Undefined Behavior sanitizer](https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html)
  * [Data flow sanitizer](https://clang.llvm.org/docs/DataFlowSanitizer.html)
